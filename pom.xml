@@ -12,6 +12,9 @@
         <module>kafka-produce-start</module>
         <module>rabbit-produce-start</module>
         <module>rabbit-consumer-start</module>
+        <module>rabbit-spring-xml-start</module>
+        <module>rabbit-spring-annotation-start</module>
+        <module>rabbit-spring-boot-start</module>
     </modules>
     <packaging>pom</packaging>
 

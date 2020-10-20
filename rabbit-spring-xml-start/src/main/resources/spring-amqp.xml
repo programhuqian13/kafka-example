@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+       xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+           https://www.springframework.org/schema/rabbit/spring-rabbit.xsd
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <rabbit:connection-factory host="10.0.20.196" id="connectionFactory" username="guest" password="guest"/>
+
+    <rabbit:template id="amqpTemplate" connection-factory="connectionFactory"/>
+
+    <!--<rabbit：admin />声明会自动查找Queue，Exchange和Binding类型的bean，并代表用户将其声明给代理。-->
+    <rabbit:admin connection-factory="connectionFactory" />
+
+    <rabbit:queue name="spring-xml-queue"/>
+
+</beans>
